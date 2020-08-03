@@ -12,9 +12,9 @@ for line in handle:
         if word == "From":
             i = words.index(word)
             counts[words[i + 1]] = counts.get(words[i + 1], 0) + 1
-for words, count in counts.items():#Find largest count
+for word, count in counts.items():#Find largest count
     if count is None or temp < count:
         temp = count
-        highest = words
+        highest = word
 
 print(highest, temp)
